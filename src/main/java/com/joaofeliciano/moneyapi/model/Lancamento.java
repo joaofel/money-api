@@ -43,6 +43,7 @@ public class Lancamento {
 	
 	@NotNull
 	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo")
 	private TipoLancamento tipoLancamento;
 	
 	@NotNull
