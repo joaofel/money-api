@@ -22,8 +22,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()
-		.withClient("root")
-		.secret("root")
+		.withClient("angular")
+		.secret("@ngul@r0")
 		.scopes("read","write")
 		.authorizedGrantTypes("password", "refresh_token")
 		.accessTokenValiditySeconds(1800)
@@ -49,7 +49,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Bean
 	public JwtAccessTokenConverter accessTokenConverter() {
 		JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-		jwtAccessTokenConverter.setSigningKey("root");
+		jwtAccessTokenConverter.setSigningKey("joao");
 		return jwtAccessTokenConverter;
 	}
 
