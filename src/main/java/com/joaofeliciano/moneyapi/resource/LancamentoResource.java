@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.joaofeliciano.moneyapi.event.RecursoCriadoEvent;
 import com.joaofeliciano.moneyapi.exceptionhandler.MoneyApiExceptionHandler.Erro;
 import com.joaofeliciano.moneyapi.model.Lancamento;
+import com.joaofeliciano.moneyapi.projection.ResumoLancamento;
 import com.joaofeliciano.moneyapi.repository.LancamentoRepository;
 import com.joaofeliciano.moneyapi.repository.filter.LancamentoFilter;
 import com.joaofeliciano.moneyapi.service.LancamentoService;
@@ -53,6 +54,12 @@ public class LancamentoResource {
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
 	public Page<Lancamento> pesquisar(LancamentoFilter lancamentoFilter, Pageable pageable) {
 		return lancamentoRepository.filtrar(lancamentoFilter, pageable);
+	}
+	
+	@GetMapping(params = "resumo")
+	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
+	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable) {
+		return lancamentoRepository.resumuir(lancamentoFilter, pageable);
 	}
 	
 	@GetMapping("/{codigo}")
