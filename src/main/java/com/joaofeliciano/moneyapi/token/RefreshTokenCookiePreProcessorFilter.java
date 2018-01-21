@@ -32,7 +32,7 @@ public class RefreshTokenCookiePreProcessorFilter implements Filter {
 		
 		HttpServletRequest req = (HttpServletRequest) request;
 		
-		if("oauth/token".equalsIgnoreCase(req.getRequestURI())
+		if("/oauth/token".equalsIgnoreCase(req.getRequestURI())
 				&& "refresh_token".equals(req.getParameter("grant_type"))
 				&& req.getCookies() != null) {
 			
