@@ -8,7 +8,7 @@ public class MoneyApiProperty {
 	private String origemPermitida = "http://localhost:8080";
 	private final Seguranca seguranca = new Seguranca();
 
-	public Seguranca getSeguranca() {
+	public Seguranca getSeguranca() { 
 		return seguranca;
 	}
 
