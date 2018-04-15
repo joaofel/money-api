@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cace4ee9e7f7420d8782812062669e56)](https://www.codacy.com/app/joaofel/money-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=joaofel/money-api&amp;utm_campaign=Badge_Grade)
+
 Aplicação para aprendizado Webservice Rest.
 
 Ferramentas utilizadas:
