@@ -1,7 +1,7 @@
 package com.joaofeliciano.moneyapi.model;
 
-import javax.persistence.Embeddable;
-import javax.validation.constraints.Size;
+import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.Size;
 
 @Embeddable
 public class Endereco {

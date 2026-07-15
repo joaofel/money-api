@@ -1,6 +1,6 @@
 package com.joaofeliciano.moneyapi.event;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.ApplicationEvent;
 
 public class RecursoCriadoEvent extends ApplicationEvent{
